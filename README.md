@@ -135,5 +135,5 @@ Ritvik Juttukonda,
 Ha Young Kim, 
 Seohyun Park, 
 Tian Sirchich, 
-(Johanna Zhang)[https://github.com/johannazhang]
+[Johanna Zhang](https://github.com/johannazhang)
 
