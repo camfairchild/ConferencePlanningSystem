@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleBack" text="Back" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleLogout" text="Logout" />
+            <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Exit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleReadme" text="View README" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane fx:id="anchorPane" maxHeight="370.0" minWidth="640.0" prefHeight="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <ScrollPane maxHeight="370.0" maxWidth="640.0" prefHeight="381.0" prefWidth="642.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0">
+                     <children>
+                        <TableView fx:id="tbview">
+                          <columns>
+                              <TableColumn fx:id="tcId" editable="false" prefWidth="64.0" text="ID" />
+                            <TableColumn fx:id="tcTitle" editable="false" prefWidth="118.0" text="Title" />
+                            <TableColumn fx:id="tcDate" editable="false" minWidth="0.0" prefWidth="158.0" text="Date &amp; Time" />
+                              <TableColumn fx:id="tcType" editable="false" prefWidth="75.0" text="Type" />
+                              <TableColumn fx:id="tcRoom" editable="false" prefWidth="74.0" text="Room ID" />
+                              <TableColumn fx:id="tcParticipants" editable="false" minWidth="0.0" prefWidth="120.0" text="Participants" />
+                              <TableColumn fx:id="tcCapacity" editable="false" minWidth="0.0" prefWidth="94.0" text="Max Capacity" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+      </children>
+    </AnchorPane>
+      <AnchorPane prefWidth="642.0">
+         <children>
+            <MenuBar prefWidth="640.0">
+              <menus>
+                <Menu fx:id="mnuOpt1" disable="true" mnemonicParsing="false" text="Organizer Options">
+                    <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleOption1" text="Reschedule Event" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleEnrollOtherUser" text="Modify User Enrollment In Event" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleChangeCap" text="Change Capacity" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleCancel" text="Cancel Event" />
+                    </items>
+                </Menu>
+                <Menu fx:id="mnuOpt2" mnemonicParsing="false" text="Show My Events">
+                    <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleOption2" text="Confirm" />
+                    </items>
+                </Menu>
+                <Menu fx:id="mnuOpt3" disable="true" mnemonicParsing="false" text="Enroll">
+                    <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleOption3" text="Confirm" />
+                    </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Schedule">
+                    <items>
+                      <MenuItem fx:id="print" mnemonicParsing="false" onAction="#handlePrint" text="Print" />
+                    </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </AnchorPane>
+  </children>
+   <stylesheets>
+      <URL value="@../css/signup.css" />
+      <URL value="@../css/inoutbox.css" />
+   </stylesheets>
+</VBox>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleBack" text="Back" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleLogout" text="Logout" />
+            <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Exit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleReadme" text="View README" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane fx:id="anchorPane" maxHeight="370.0" minWidth="640.0" prefHeight="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <ScrollPane maxHeight="370.0" maxWidth="640.0" prefHeight="381.0" prefWidth="642.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0">
+                     <children>
+                        <TableView fx:id="tbview" prefHeight="400.0" prefWidth="640.0">
+                          <columns>
+                              <TableColumn fx:id="tcId" editable="false" prefWidth="64.0" text="ID" />
+                            <TableColumn fx:id="tcAvailableTime" editable="false" prefWidth="118.0" text="Available Time" />
+                            <TableColumn fx:id="tcCapacity" editable="false" minWidth="0.0" prefWidth="158.0" text="Max Capacity" />
+                              <TableColumn fx:id="tcBookedTimes" editable="false" prefWidth="165.0" text="Booked Times" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+      </children>
+    </AnchorPane>
+      <AnchorPane prefWidth="642.0">
+         <children>
+            <MenuBar prefWidth="640.0">
+              <menus>
+                <Menu fx:id="mnuOpt1" disable="true" mnemonicParsing="false" onAction="#handleOption1" text="Create Room">
+                     <items>
+                        <MenuItem fx:id="openRoomCreation" mnemonicParsing="false" onAction="#handleOption1" text="Open Room Creation" />
+                     </items></Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </AnchorPane>
+  </children>
+   <stylesheets>
+      <URL value="@../css/signup.css" />
+      <URL value="@../css/inoutbox.css" />
+   </stylesheets>
+</VBox>

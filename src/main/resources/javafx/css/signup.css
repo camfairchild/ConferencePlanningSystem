@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../fonts/Roboto/Roboto-Regular.ttf');
+}
+
+.google {
+    -fx-font-family: "Roboto";
+}
+
+.btn {
+    -fx-background-color: white;    
+    -fx-border-style: solid;
+    -fx-border-color: black;
+    /*top, rgt, btm, lft*/
+    -fx-border-width: 1.5px;
+}

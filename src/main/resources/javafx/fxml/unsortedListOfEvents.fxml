@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <MenuBar VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleBack" text="Back" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleLogout" text="Logout" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Exit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleReadme" text="View README" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane fx:id="anchorPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+            <children>
+                    <Text layoutX="405.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Events">
+                        <font>
+                            <Font size="25.0" />
+                        </font>
+                    </Text>
+            <AnchorPane prefHeight="374.0" prefWidth="290.0">
+               <children>
+                  <ScrollPane layoutY="1.0" prefHeight="374.0" prefWidth="290.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="372.0" prefWidth="288.0">
+                           <children>
+                              <ListView fx:id="lvEvents" prefHeight="376.0" prefWidth="290.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <TextArea fx:id="info" editable="false" layoutX="319.0" layoutY="109.0" prefHeight="175.0" prefWidth="278.0" />
+            </children>
+        </AnchorPane>
+    </children>
+    <stylesheets>
+        <URL value="@../css/signup.css" />
+        <URL value="@../css/inoutbox.css" />
+    </stylesheets>
+</VBox>

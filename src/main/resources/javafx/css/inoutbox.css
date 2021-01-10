@@ -1,0 +1,9 @@
+.lbl {
+    -fx-width: 100%;
+    -fx-color: #000000;
+    -fx-background-color:grey;
+}
+
+.lbl.odd {
+    -fx-background-color: white;
+}

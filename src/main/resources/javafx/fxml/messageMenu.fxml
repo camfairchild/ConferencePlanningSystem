@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleBack" text="Back" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleLogout" text="Logout" />
+            <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Exit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleReadme" text="View README" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane fx:id="anchorPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <SplitPane dividerPositions="0.35, 0.7" prefHeight="365.0" prefWidth="640.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="363.0" prefWidth="290.0">
+                     <children>
+                        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="363.0" prefWidth="219.0">
+                          <content>
+                            <AnchorPane maxHeight="1.7976931348623157E308" minHeight="0.0" minWidth="0.0">
+                                 <children>
+                                    <TitledPane collapsible="false" minHeight="370.0" text="Contacts">
+                                       <content>
+                                          <ListView fx:id="lvContacts" prefHeight="334.0" prefWidth="219.0" />
+                                       </content>
+                                    </TitledPane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="363.0" prefWidth="290.0">
+                     <children>
+                        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="363.0" prefWidth="219.0">
+                           <content>
+                              <AnchorPane maxHeight="1.7976931348623157E308" minHeight="0.0" minWidth="0.0">
+                                 <children>
+                                    <TitledPane collapsible="false" minHeight="370.0" text="Messages">
+                                       <content>
+                                          <ListView fx:id="lvMessages" prefHeight="363.0" prefWidth="219.0" />
+                                       </content>
+                                    </TitledPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="363.0" prefWidth="193.0">
+                     <children>
+                        <Text layoutX="19.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Message Menu">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Text>
+                        <Button defaultButton="true" layoutX="13.0" layoutY="320.0" mnemonicParsing="false" onAction="#handleSend" prefHeight="29.0" prefWidth="161.0" styleClass="btn" text="Send" />
+                        <TextArea fx:id="txtNewMessage" layoutX="13.0" layoutY="240.0" onKeyPressed="#handleKeyPress" prefHeight="70.0" prefWidth="161.0" promptText="Message" />
+                        <TextArea fx:id="txtMessageContent" editable="false" layoutX="13.0" layoutY="50.0" prefHeight="145.0" prefWidth="161.0" text="Message Content" />
+                        <Button defaultButton="true" layoutX="13.0" layoutY="202.0" mnemonicParsing="false" onAction="#handleUnread" prefHeight="30.0" prefWidth="161.0" styleClass="btn" text="Mark Unread" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+      </children>
+    </AnchorPane>
+  </children>
+   <stylesheets>
+      <URL value="@../css/signup.css" />
+      <URL value="@../css/inoutbox.css" />
+   </stylesheets>
+</VBox>
