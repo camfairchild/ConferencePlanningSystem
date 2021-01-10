@@ -128,12 +128,12 @@ When creating accounts/events/messages, information that you could use is provid
     1. to print the schedule to a txt file, you can first sort the events in all events, then to print it, click the 
      Schedule button on the bottom, then click the print button. This creates a txt file that can be opened by the user.
 ## Authors
-Cameron Fairchild, 
+Cameron Fairchild @Vrim, 
 Petra Fayad, 
 Safa Hussein, 
 Ritvik Juttukonda, 
 Ha Young Kim, 
 Seohyun Park, 
 Tian Sirchich, 
-Johanna Zhang
+Johanna Zhang @johannazhang
 
